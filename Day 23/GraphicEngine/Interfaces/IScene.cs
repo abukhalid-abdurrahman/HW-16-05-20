@@ -8,6 +8,7 @@ namespace Day_23
 {
     interface IScene
     {
+        string Name { get; set; }
         void CreateScene();
         void CloseScene();
         void SaveScene();
