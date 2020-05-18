@@ -8,14 +8,17 @@ namespace Day_23
         {
             Console.WriteLine("Alif 3D - Game Engine");
 
+            /*Dependency Inversion Principle*/
             GraphicRenderer graphicRenderer = new GraphicRenderer(new OpenGLAPI());
             graphicRenderer.InitRenderer();
 
+            /*Single Responsibility Princilpe*/
             Scene scene = new Scene();
             scene.Name = "Intro";
             scene.FilePath = "/scenes/level01.scn";
             scene.CreateScene();
 
+            /*Liskov Substitution Principle*/
             Light light = new Light();
             light.Name = "Ambient Light";
             light.objectPosition = new Vector3 { X = 0, Y = 0, Z = 0 };
@@ -23,7 +26,8 @@ namespace Day_23
             light.LightType = "Ambient";
             light.LightIntesivity = 1;
             light.Push();
-            
+
+            /*Liskov Substitution Principle*/
             Geometry geometry = new Geometry();
             geometry.GeometryType = "Triangle";
             geometry.Name = "Ground";
@@ -47,9 +51,11 @@ namespace Day_23
             geometry.Push();
             scene.SaveScene();
 
+            /*Open/Closed Principle*/
             RenderBuffer renderBuffer = new RenderBuffer();
             renderBuffer.Render(scene, new BakedRender());
 
+            /*Interface Segregation Principle*/
             MobileBuilder mobileBuilder = new MobileBuilder();
             mobileBuilder.BuildSystem = "Internal";
             mobileBuilder.GraphicAPI = "OpenGL ES v3.0";
