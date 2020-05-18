@@ -43,12 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GraphicEngine\ComputerBuilder.cs" />
+    <Compile Include="GraphicEngine\Direct3DAPI.cs" />
+    <Compile Include="GraphicEngine\GraphicRenderer.cs" />
+    <Compile Include="GraphicEngine\Interfaces\IBuilder.cs" />
+    <Compile Include="GraphicEngine\Interfaces\IComputerBuilder.cs" />
+    <Compile Include="GraphicEngine\Interfaces\IGraphicAPI.cs" />
+    <Compile Include="GraphicEngine\Interfaces\IMobileBuilder.cs" />
     <Compile Include="GraphicEngine\Interfaces\IObject.cs" />
     <Compile Include="GraphicEngine\Interfaces\IRenderType.cs" />
     <Compile Include="GraphicEngine\Interfaces\IScene.cs" />
     <Compile Include="GraphicEngine\Interfaces\IRender.cs" />
     <Compile Include="GraphicEngine\BakedRender.cs" />
+    <Compile Include="GraphicEngine\Geometry.cs" />
     <Compile Include="GraphicEngine\Light.cs" />
+    <Compile Include="GraphicEngine\MobileBuilder.cs" />
+    <Compile Include="GraphicEngine\OpenGLAPI.cs" />
     <Compile Include="GraphicEngine\RealtimeRender.cs" />
     <Compile Include="GraphicEngine\RenderBuffer.cs" />
     <Compile Include="GraphicEngine\Scene.cs" />
@@ -59,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ExampleScene.fbx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
