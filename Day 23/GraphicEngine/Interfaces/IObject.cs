@@ -1,14 +1,12 @@
 ﻿/*
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * Single Responsibility Princilpe (Vertex)
+ *(Liskov Substitution Principle (Object Interface)
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 namespace Day_23
 {
-    struct Vertex
+    interface IObject
     {
-        public int X;
-        public int Y;
-        public int Z;
+        void Push();
     }
 }
