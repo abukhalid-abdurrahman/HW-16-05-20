@@ -16,7 +16,7 @@ namespace Day_23
     class Light : SceneObject , IObject
     {
         public int LightIntesivity { get; set; }
-        private string LightType { get; set; }
+        public string LightType { get; set; }
         public Color LightColor { get; set; }
         public void Push()
         {
