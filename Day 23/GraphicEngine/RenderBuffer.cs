@@ -6,10 +6,11 @@
 using System;
 namespace Day_23
 {
-    class RenderBuffer
+    class RenderBuffer : IRender
     {
-        public void Render(IScene scene)
+        public void Render(IScene scene, IRenderType renderType)
         {
+            renderType.Render();
             Console.WriteLine($"Rendering Scene {scene.Name} --> Successfully");
         }
     }
